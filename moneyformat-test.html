@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>Simple MoneyFormat example</title>
+        <style>
+            textarea {
+                padding: 10px;
+                vertical-align: top;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <script src='https://rawgit.com/anant1998/moneyFormat/master/moneyformat.js'></script>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Amount
+                </td>
+                <td>
+                    Currency
+                </td>
+                <td>
+                    MoneyFormat
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    1000000
+                </td>
+                <td>
+                    <select id="locale" onchange="sync()">
+                        <option value="US"> US (United States) </option>
+                        <option value="IN"> IN (India) </option>
+                        <option value="DE"> DE (Deutschland) </option>
+                        <option value="CA"> CA (Canada) </option>
+                        <option value="ES"> ES (Spain) </option>
+                        <option value="GB"> GB (Great Britain) </option>
+                        <option value="SE"> SE (Sweden) </option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" onclick="alert(moneyFormat(1000000,'US'))" />
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
+
