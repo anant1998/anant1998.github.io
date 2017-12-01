@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>MoneyFormat</title>
+        <style>
+            textarea {
+                padding: 10px;
+                vertical-align: top;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <script src='https://rawgit.com/anant1998/moneyFormat/master/moneyformat.js'></script>
+    <script>
+        function sync() {
+            document.getElementById('result').innerHTML = moneyFormat(document.getElementById('amount').value, document.getElementById('locale').value);
+        }
+    </script>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Amount
+                </td>
+                <td>
+                    Currency
+                </td>
+                <td>
+                    MoneyFormat
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input id="amount" type="text" onchange="sync()"></input>
+                </td>
+                <td>
+                    <select id="locale" onchange="sync()">
+                        <option value="US"> US (United States) </option>
+                        <option value="IN"> IN (India) </option>
+                        <option value="DE"> DE (Deutschland) </option>
+                        <option value="CA"> CA (Canada) </option>
+                    </select>
+                </td>
+                <td>
+                    <span id="result"></span>
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>
+
