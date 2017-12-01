@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset='utf-8'/>
-        <title>MoneyFormat</title>
+        <title>Simple MoneyFormat example</title>
         <style>
             textarea {
                 padding: 10px;
@@ -12,11 +12,6 @@
         </style>
     </head>
     <script src='https://rawgit.com/anant1998/moneyFormat/master/moneyformat.js'></script>
-    <script>
-        function sync() {
-            document.getElementById('result').innerHTML = moneyFormat(document.getElementById('amount').value, document.getElementById('locale').value);
-        }
-    </script>
     <body>
         <table>
             <tr>
@@ -33,7 +28,7 @@
 
             <tr>
                 <td>
-                    <input id="amount" type="text" onchange="sync()"></input>
+                    1000000
                 </td>
                 <td>
                     <select id="locale" onchange="sync()">
@@ -47,7 +42,7 @@
                     </select>
                 </td>
                 <td>
-                    <span id="result"></span>
+                    <input type="button" onclick="alert(moneyFormat(1000000,'US'))" />
                 </td>
             </tr>
 
